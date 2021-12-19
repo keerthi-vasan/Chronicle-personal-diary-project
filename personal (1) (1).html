@@ -1,0 +1,152 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<style>
+
+.bgimage{
+	/* The image used */
+  background-image: url("Diary.jpg");
+
+  /* Full height */
+  width:100%;
+  height: 100vh;
+   /* Add the blur effect 
+  filter: blur(1px);
+  -webkit-filter: blur(1px);*/
+
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+ }
+
+/*Navigation bar*/
+.navbar{margin: 1%;}
+
+.navbar{
+	transition:0.4s;
+	}	
+	
+.wrapper {
+  max-width: 75%;
+  margin: auto;
+}
+
+
+/*Text area*/
+h1 { 
+  color: #FCFBFB ; 
+  margin: 3rem 0 1rem 0; 
+  padding: 0;
+  margin-top:8%;
+  font-size: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 500px;
+  resize: none;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  color: #666;
+  box-shadow: inset 0 0 0.25rem #ddd;
+  &:focus {
+    outline: none;
+    border: 1px solid darken(#ddd, 5%);
+    box-shadow: inset 0 0 0.5rem darken(#ddd, 5%);
+  }
+  &[placeholder] { 
+    font-style: italic;
+    font-size: 0.875rem;
+  }
+}
+
+#the-count {
+  float: right;
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+
+@media only screen and(min-width:200px){
+	
+	.navbar{width:40%;}
+	body{width:40%;}
+	form{width:40%;}
+	}
+div {
+  background-image: url('darksky.jpg');
+}
+
+body {
+  background-image: url('darksky.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+</style>
+</head>
+<body>
+
+<div style="background-image: url('darksky.jpg');">
+<!Navigation bar>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light ">
+<img src="logo.svg" height="28" alt="">
+  <a class="navbar-brand" href="#" style="color:white">Chronicle</a>
+   
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+       <button type="button" class="btn btn-primary" onclick="window.location='http://localhost/program/chronicle/homepage.html';">Logout</button>
+	   <button type="button" class="btn btn-primary" onclick="window.location='http://localhost/program/chronicle/view.html';">View</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!Textarea>
+<form action="diary.php" name="diary" method="post">
+<div class="wrapper">
+  <input type="hidden" name="email1">
+  <input type="hidden" name="email2">
+  
+  <h1>Your diary here</h1>
+  <textarea name="the-textarea" id="the-textarea" maxlength="1000000" placeholder="Start Typin..."autofocus></textarea>
+  <div id="the-count">
+    <span id="current">0</span>
+    <span id="maximum">/ 1000000</span>
+  </div>
+  <button class="btn btn-success">Save</button>
+</div>
+</form>
+
+
+
+<script>
+var b=localStorage.getItem("myvalue");
+var c=localStorage.getItem("myvalue1");
+document.diary.email1.value=b;
+document.diary.email2.value=c;
+</script>
+
+</body>
+</html>

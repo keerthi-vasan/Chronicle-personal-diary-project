@@ -1,0 +1,466 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+ 
+ <meta charset="utf-8" /> 
+ <meta name="viewport"
+ content="width=device-width, initial-scale=1.0" /> 
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+ <title>Chronicle</title>
+ 
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Favicon-->
+<link rel="icon"  type="image/png" href="logo.svg">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+
+
+
+.bgimage{
+	/* The image used */
+  background-image: url("Diary.jpg");
+
+  /* Full height */
+  width:100%;
+  height: 100vh;
+   /* Add the blur effect 
+  filter: blur(1px);
+  -webkit-filter: blur(1px);*/
+
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+ }
+
+text-align: center;}
+
+.navbar{margin: 1%;}
+
+.navbar{
+	transition:0.4s;
+	}	
+
+@media only screen and(min-width:200px){
+	
+	.navbar{width:40%;}
+	body{width:40%;}
+	form{width:40%;}
+	}
+#loader { 
+            border: 12px solid #f3f3f3; 
+            border-radius: 50%; 
+            border-top: 12px solid #444444; 
+            width: 70px; 
+            height: 70px; 
+            animation: spin 1s linear infinite; 
+        } 
+          
+        @keyframes spin { 
+            100% { 
+                transform: rotate(360deg); 
+            } 
+        } 
+          
+        .center { 
+            position: absolute; 
+            top: 0; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            margin: auto; 
+        } 
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#carousel-example-2
+{
+margin-left:5%;
+margin-right:5%;
+margin-top:5%;
+}
+
+.bgimage .content {
+  position: absolute;
+  bottom: 5%;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.team{
+padding:1%;
+}
+
+		
+</style>
+
+</head>
+
+
+<body id="body">
+
+	<div id="loader" class="center"></div> 
+	
+	<script>
+document.onreadystatechange = function() { 
+            if (document.readyState !== "complete") { 
+                document.querySelector( 
+                  "body").style.visibility = "hidden"; 
+                document.querySelector( 
+                  "#loader").style.display = "visible"; 
+            } else { 
+                document.querySelector( 
+                  "#loader").style.visibility = "hidden";
+                document.querySelector( 
+                  "body").style.visibility = "visible"; 
+            } 
+        };
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}		
+</script>
+
+  
+</header>
+<!Signup>
+<form action="signup.php" method="post" name="signup" id="signup">
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" action="signup.php">
+  
+  <div class="modal-dialog" role="document">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    <div class="modal-content">
+	
+	<div class="imgcontainer text-center">
+    <img src="avatar.png" alt="Avatar" class="avatar">
+  </div>
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+        
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas prefix grey-text"></i>
+          <input type="text" id="orangeForm-name" class="form-control validate" name="uname" placeholder="Enter Name" onblur="valid()" required>
+          <label data-error="wrong" data-success="right" for="orangeForm-name">Your name</label>
+        </div>
+		 <div class="md-form mb-5">
+          <i class="fas prefix grey-text"></i>
+          <input type="tel" id="orangeForm-name" class="form-control validate" name="phone" placeholder="(eg:9112233445)" pattern="[9/8/7/6][0-9]{9}"  required >
+          <label data-error="wrong" data-success="right" for="orangeForm-name">Phone number</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas prefix grey-text"></i>
+          <input type="email" id="orangeForm-email" class="form-control validate" name="email" placeholder="(eg:xyz@mail.com)" required>
+          <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass" class="form-control validate" name="pass" placeholder="Enter password" required>
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-deep-orange" name="insert">Sign up</button>
+      </div>
+    </div>
+  </div>
+  
+</div>
+ 
+</form>
+
+<!Login>
+<form method="post" action="login.php" name="login"> 
+<div class="modal fade" id="loginform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    <div class="modal-content">
+	
+	 <div class="imgcontainer text-center">
+    <img src="avatar.png" alt="Avatar" class="avatar">
+  </div>
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Login</h4>
+        
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas prefix grey-text"></i>
+          <input type="email" id="orangeForm-email" class="form-control validate" name="yemail" required>
+          <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
+        </div>
+        <div class="md-form mb-4">
+          <i class="fas prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass" class="form-control validate" name="ypass" required>
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-deep-orange"name="submit" onclick="sender()">Login</button>
+		
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+
+<!Navigation bar>
+
+<nav class="navbar navbar-expand-lg fixed-center navbar-light">
+<img src="logo.svg" height="28" alt="">
+  <a class="navbar-brand" href="#">Chronicle</a>
+ 
+ <a class="navbar-brand">-Your Personal Diary</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#body">Home <span class="sr-only" >(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#carousel-example-2">Gallery</a>
+      </li>
+	   <li class="nav-item">
+        <a class="nav-link" href="#about">About us</a>
+      </li>
+	   <li class="nav-item">
+        <a class="nav-link" href="#team">Team</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="btn btn-outline-info btn-rounded mb-4" data-toggle="modal" data-target="#loginform">Login</a>
+      </li>
+      <li class="nav-item">
+         <a href="" class="btn btn-outline-info btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Signup</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="bgimage">
+
+<div class="content">
+    <h1>Diary</h1>
+    <p>“What an odd thing a diary is: the things you omit are more important than those you put in."</p>
+  </div>
+
+</div>
+
+
+<script>
+function sender()
+{
+var c=document.login.yemail.value;
+var d=document.login.ypass.value;
+localStorage.setItem("myvalue",c);
+localStorage.setItem("myvalue1",d);
+localStorage.setItem("myvalue2",c);
+localStorage.setItem("myvalue3",d);
+window.location.href="personal.html";
+}
+
+</script>
+
+<!Gallery>
+<!--Carousel Wrapper-->
+<div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-2" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="view">
+        <img class="d-block w-100" src="https://www.goodtherapy.org/blog/blog/wp-content/uploads/2016/05/person-writing-in-diary.jpg" alt="First slide">
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Start Recording Your life</h3>
+        <p></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--Mask color-->
+      <div class="view">
+        <img class="d-block w-100" src="gift.jpg" alt="Second slide">
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Present Your Future a Better Gift</h3>
+        <p></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--Mask color-->
+      <div class="view">
+        <img class="d-block w-100" src="color.jpg" alt="Third slide">
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">Relish Beautiful Memories from the past!</h3>
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <!--/.Slides-->
+  <!--Controls-->
+  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+
+
+
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container" id="about">
+  <div class="w3-content">
+    <div class="w3-twothird" >
+      <h1>A Record of Your Wonderful Life</h1>
+      <h5 class="w3-padding-32">Present it to the Future You</h5>
+
+      <p class="w3-text-grey">A diary is a private place where you can keep your thoughts, feelings and opinions on everything from work to school and everywhere in between. There are all different types of diaries, like food diaries, health diaries or academic diaries. But your diary doesn’t have to be specific if you don’t want it to be, it can also just be a place where you write about whatever you want. If you’re just getting started, maybe you haven’t decided what you want to write about, and that’s fine. That is what we are here for – to help you with all those moments of writer’s block you may be having. Our tips can help guide you and inspire you. Let’s begin!</p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Memories</h1>
+      <h5 class="w3-padding-32">"A moment lasts all of a second, but the memory lives on forever"</h5>
+
+      <p class="w3-text-grey">To get yourself writing, ask yourself questions:</p>
+<p>What did you learn today?
+What do you want to accomplish?
+What do you want to fix?
+How are you feeling?
+These can relate to your general life, or specific parts of it, but turn inward and ask yourself things.</p>
+    </div>
+  </div>
+</div>
+
+
+<!--Team-->
+<div class="team" id="team">
+<h1 align="center">OUR TEAM</h1>
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="keerthi.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Keerthivasan.S</h5>
+      <p class="card-text">Mtech Software Engineering, VIT.</p>
+    </div>
+    <div class="card-footer">
+      <i class="fa fa-instagram w3-hover-opacity"  onclick="window.location='https://www.instagram.com/k_ee_rthi_vasan/';"></i>
+	  <i class="fa fa-facebook-official w3-hover-opacity"  onclick="window.location='https://www.facebook.com/keerthi.vasan.9440234';"></i>
+	  <i class="fa fa-envelope  w3-hover-opacity"  onclick="window.location='http://gmail.com';""></i>
+	  <i class="fa fa-twitter w3-hover-opacity"  onclick="window.location='http://twitter.com';"></i>
+	  
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="naveen.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">V.Naveen Yugenthar</h5>
+      <p class="card-text">Mtech Software Engineering, VIT.p>
+    </div>
+    <div class="card-footer">
+      <i class="fa fa-instagram w3-hover-opacity"  onclick="window.location='https://www.instagram.com/naveen_ajai/';"></i>
+	  <i class="fa fa-facebook-official w3-hover-opacity"  onclick="window.location='https://www.facebook.com/naveen.ajai';"></i>
+	  <i class="fa fa-envelope  w3-hover-opacity"  onclick="window.location='http://gmail.com';""></i>
+	  <i class="fa fa-twitter w3-hover-opacity"  onclick="window.location='http://twitter.com';"></i>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="jawahar.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Jawahar.V</h5>
+      <p class="card-text">Mtech Software Engineering, VIT.</p>
+    </div>
+    <div class="card-footer">
+      <i class="fa fa-instagram w3-hover-opacity"  onclick="window.location='https://www.instagram.com/jaquarjack/';"></i>
+	  <i class="fa fa-facebook-official w3-hover-opacity"  onclick="https://www.facebook.com/profile.php?id=100009455466343';"></i>
+	  <i class="fa fa-envelope  w3-hover-opacity"  onclick="window.location='http://gmail.com';""></i>
+	  <i class="fa fa-twitter w3-hover-opacity"  onclick="window.location='http://twitter.com';"></i>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+<button class="w3-button w3-black w3-padding-large w3-large w3-margin-center" onclick="window.scrollTo(0,0)">Get Started</button>  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"  onclick="window.location='http://facebook.com';"></i>
+    <i class="fa fa-instagram w3-hover-opacity"  onclick="window.location='http://instagram.com';"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"  onclick="window.location='http://snapchat.com';"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"  onclick="window.location='http://pinterest.com';"></i>
+    <i class="fa fa-twitter w3-hover-opacity"  onclick="window.location='http://twitter.com';"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"  onclick="window.location='http://linkedin.com';"></i>
+ </div>
+ 
+</footer>
+
+</body>
+</html>
